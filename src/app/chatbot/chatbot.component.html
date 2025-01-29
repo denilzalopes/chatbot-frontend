@@ -1,0 +1,14 @@
+<div class="chatbot-container">
+  <div class="chatbot-header">
+    Chatbot du Musée
+  </div>
+  <div class="chatbot-messages">
+    <div *ngFor="let message of messages" class="message">
+      {{ message }}
+    </div>
+  </div>
+  <div class="chatbot-input">
+    <input [(ngModel)]="userInput" type="text" placeholder="Posez votre question..." (keyup.enter)="sendMessage()" />
+    <button (click)="sendMessage()">Envoyer</button>
+  </div>
+</div>
